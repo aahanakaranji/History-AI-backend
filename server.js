@@ -9,6 +9,10 @@ dotenv.config();
 // ✅ Allow cross-origin requests
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Backend is live!");
+});
+
 // Your test route
 app.post("/chat", async (req, res) => {
   const { time, area } = req.body;
